@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas cube</title>
+    <title>Only 18+</title>
     <style>
         
         /* CSS */
@@ -50,18 +50,31 @@
             </style>
 </head>
 <body>
-    <canvas id="myCanvas" width="1230" height="560" style="border:5px solid rgb(255, 255, 255);"></canvas>
     <script>
+        
+        let age = +prompt("Скільки вам рочків?", "");
 
-        let canvas = document.getElementById("myCanvas"), 
-        cxt = canvas.getContext("2d");
-        cxt.strokeStyle = "gray";
-        cxt.fillStyle = "black";
-        cxt.lineWidth = 6;
-        cxt.strokeRect(50, 40, 100, 100);
-        cxt.fillRect(50, 40, 100, 100);
+        if (age != null) {
+            if ((age >= 18 && age <= 70)) {
+                let lastDigit = age % 10;
 
-        </script>
+                if (lastDigit === 0 || (lastDigit >= 5 && lastDigit <= 9)) {
+                    alert("Вам " + age + " років, доступ можна");
+                } else if (lastDigit === 1) {
+                    alert("Вам " + age + " рік, доступ можна");
+                } else {
+                    alert("Вам " + age + " роки, доступ можна");
+                }
+            } else {
+                alert("Вам " + age + " років, доступ не можна");
+            }
+        } else {
+            alert("Введіть, будь ласка, число.");
+        }
+
+
+    </script>
+    <img src="man_face2.png"><br>
     <a href=index.html target="_blank"><button class="button-40" role="button">На головну</button></a><br><br>
 </body>
 </html>

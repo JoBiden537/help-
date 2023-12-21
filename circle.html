@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas cube</title>
+    <title>Canvas circle</title>
     <style>
         
         /* CSS */
@@ -50,18 +50,26 @@
             </style>
 </head>
 <body>
-    <canvas id="myCanvas" width="1230" height="560" style="border:5px solid rgb(255, 255, 255);"></canvas>
+    <canvas id="myCanvas" width="1230" height="300" style="border:5px solid rgb(255, 255, 255);"></canvas>
     <script>
 
-        let canvas = document.getElementById("myCanvas"), 
-        cxt = canvas.getContext("2d");
-        cxt.strokeStyle = "gray";
-        cxt.fillStyle = "black";
-        cxt.lineWidth = 6;
-        cxt.strokeRect(50, 40, 100, 100);
-        cxt.fillRect(50, 40, 100, 100);
+        let canvas = document.getElementById('myCanvas');
+        let cxt = canvas.getContext('2d');
+        let x = 500;
+        let y = 200; 
+        let radius = 75; 
+        let startAngle = 0; 
+        let endAngle = 2 * Math.PI; 
+        let counterClockwise = false; 
 
-        </script>
+        cxt.beginPath(); 
+        cxt.arc(x, y, radius, startAngle, endAngle, counterClockwise);
+        cxt.lineWidth = 5; 
+ 
+        cxt.strokeStyle = "black"; 
+        cxt.stroke();
+
+    </script>
     <a href=index.html target="_blank"><button class="button-40" role="button">На головну</button></a><br><br>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas cube</title>
+    <title>Math test</title>
     <style>
         
         /* CSS */
@@ -50,18 +50,22 @@
             </style>
 </head>
 <body>
-    <canvas id="myCanvas" width="1230" height="560" style="border:5px solid rgb(255, 255, 255);"></canvas>
     <script>
-
-        let canvas = document.getElementById("myCanvas"), 
-        cxt = canvas.getContext("2d");
-        cxt.strokeStyle = "gray";
-        cxt.fillStyle = "black";
-        cxt.lineWidth = 6;
-        cxt.strokeRect(50, 40, 100, 100);
-        cxt.fillRect(50, 40, 100, 100);
-
-        </script>
+        let count = +prompt('Скільки буде 2*2?', 0);
+            switch (count) {
+            case 3:
+         alert('Якось мало');
+            break;
+            case 4:
+            alert('Правильно!');
+            break;
+            case 5:
+         alert('Багато');
+            break;
+            default:
+            alert( 'Я не вмію рахувати' );
+            }
+    </script>
     <a href=index.html target="_blank"><button class="button-40" role="button">На головну</button></a><br><br>
 </body>
 </html>

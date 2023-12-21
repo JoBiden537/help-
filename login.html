@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas cube</title>
+    <title>Login</title>
     <style>
         
         /* CSS */
@@ -50,18 +50,29 @@
             </style>
 </head>
 <body>
-    <canvas id="myCanvas" width="1230" height="560" style="border:5px solid rgb(255, 255, 255);"></canvas>
     <script>
-
-        let canvas = document.getElementById("myCanvas"), 
-        cxt = canvas.getContext("2d");
-        cxt.strokeStyle = "gray";
-        cxt.fillStyle = "black";
-        cxt.lineWidth = 6;
-        cxt.strokeRect(50, 40, 100, 100);
-        cxt.fillRect(50, 40, 100, 100);
-
-        </script>
-    <a href=index.html target="_blank"><button class="button-40" role="button">На головну</button></a><br><br>
+        let login= prompt("Введіть логін користувача (User)")
+        if (login== "User"){
+            alert("Користувача роспізнано")
+            let pass= prompt("Введіть пароль користувача (password)")
+            if (pass== "password"){
+                alert("Ласкаво просимо!")
+                document.write("Вхід виконано")
+            } else if (pass== null){
+                alert("Вхід скасовано")
+                document.write("Вхід не виконано")
+            } else {
+                alert("Пароль невірний")
+                document.write("Вхід не виконано")
+            }
+        } else if (login== null){
+            alert("Вхід скасовано")
+            document.write("Вхід не виконано")
+        } else {
+            alert("Користувач невизначений")
+            document.write("Вхід не виконано")
+        }
+    </script>
+    <br><br><a href=index.html target="_blank"><button class="button-40" role="button">На головну</button></a><br><br>
 </body>
 </html>
