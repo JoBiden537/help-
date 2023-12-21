@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas cube</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="1230" height="560" style="border:5px solid rgb(255, 255, 255);"></canvas>
+    <script>
+
+        let canvas = document.getElementById("myCanvas"), 
+        cxt = canvas.getContext("2d");
+        cxt.strokeStyle = "gray";
+        cxt.fillStyle = "black";
+        cxt.lineWidth = 6;
+        cxt.strokeRect(50, 40, 100, 100);
+        cxt.fillRect(50, 40, 100, 100);
+
+        </script>
+        <a href=index.html>На головну</a>
+</body>
+</html>
