@@ -54,10 +54,15 @@
         let num= +prompt("Введіть число", "")
         let emoji= prompt("Введіть емодзі", "")
         let count;
-            for (count= 1; count<= num; count++){
-                let row = "";
-                for (let e = 0; e < count; e++) {
-                    row += emoji;
+        if (num == 0 || emoji == 0) {
+          alert("До побачення.")
+        } else if (num == 0 && emoji == 0) {
+          alert("До побачення.")
+        }
+        for (count= 1; count<= num; count++){
+            let row = "";
+            for (let e = 0; e < count; e++) {
+              row += emoji;
             }
                 document.write(row + "<br>");
         }

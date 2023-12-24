@@ -52,16 +52,19 @@
 <body>
     <script>
         let num= +prompt("Вгадайте число від 1 до 100. Введіть вашу догадку нижче:", "")
+        while (num == 0){
+            num= alert("До побачення.")
+        }
         while (num > 11){
             num= +prompt("Ваше число більше.", "")
         }
         while (num < 11){
-                num= +prompt("Ваше число менше.", "")
+            num= +prompt("Ваше число менше.", "")
             }
         if (num== 11){
                 document.write("Правильно!")
-            }
+        }
     </script>
-    <a href=index.html target="_blank"><button class="button-40" role="button">На головну</button></a><br><br>
+    <br><br><a href=index.html target="_blank"><button class="button-40" role="button">На головну</button></a><br><br>
 </body>
 </html>

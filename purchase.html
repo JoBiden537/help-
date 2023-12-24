@@ -54,6 +54,10 @@
         function checkSum(sum) {
         if (sum > 1000) {
         return true;
+        } else if (sum == 0){
+          document.write("До побачення.")
+        } else if (sum < 0){
+          document.write("Як ви вийшли в мінус?!")
         } else {
         return confirm('Для знижки вам необхідно вибрати ще товарів на сумму більше 1000 грн. Продовжимо?');
         }

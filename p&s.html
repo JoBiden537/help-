@@ -56,9 +56,15 @@
         b= +prompt("Введіть сторону Б:");
         p= 2*(a+b);
         s= a*b;
-        document.write ("Периметр- " + p + "<br>");
-        document.write ("Площа- " + s);
+        if (a == null || b == null){
+          document.write("До побачення.")
+        } else if (a == null && b == null){
+          document.write("До побачення.")
+        } else {
+          document.write ("Периметр- " + p + "<br>");
+          document.write ("Площа- " + s);
+        }
     </script>
-    <a href=index.html target="_blank"><button class="button-40" role="button">На головну</button></a><br><br>
+    <br><br><a href=index.html target="_blank"><button class="button-40" role="button">На головну</button></a><br><br>
 </body>
 </html>

@@ -55,7 +55,7 @@
         let a = +prompt("Угу. Тепер введіть коефіцієнт A. Не забувайте про мінуси (якщо вони є)!", "1"); //                           ||
         let b = +prompt('Введіть коефіцієнт B. Знов, не забувайте про мінуси (якщо B у рівнянні нема введіть "0")');
         let c = +prompt('Введіть вільний член. Мінуси! (якщо C у рівнянні нема введіть "0")');
-        let r = +prompt("Введіть результат (вільний член): ");
+        let r = +prompt("Введіть результат (вільний член): ", "0");
 
         if (type == "A + B + C"){ //Перевірка на тип A + B + C
             if (r === 0){
@@ -222,8 +222,12 @@
                     document.write("У рівнення " + c + " * (" + b + "x + x&sup2;) = 0 два корені, це " + x1 + " та " + x2 + ". Дискримінант= " + D);
                 }
             }
+        } else if (type == null){
+            document.write("Я не домовив.")
+        } else {
+            document.write('Перевірте правильність введення.')
         }
     </script>
-    <a href=index.html target="_blank"><button class="button-40" role="button">На головну</button></a><br><br>
+    <br><br><a href=index.html target="_blank"><button class="button-40" role="button">На головну</button></a><br><br>
 </body>
 </html>

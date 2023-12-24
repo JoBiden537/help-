@@ -54,7 +54,7 @@
         
         let age = +prompt("Скільки вам рочків?", "");
 
-        if (age != null) {
+        if (age != 0) {
             if ((age >= 18 && age <= 70)) {
                 let lastDigit = age % 10;
 
@@ -68,6 +68,8 @@
             } else {
                 alert("Вам " + age + " років, доступ не можна");
             }
+        } else if (age == 0){
+            alert("До побачення.")
         } else {
             alert("Введіть, будь ласка, число.");
         }
